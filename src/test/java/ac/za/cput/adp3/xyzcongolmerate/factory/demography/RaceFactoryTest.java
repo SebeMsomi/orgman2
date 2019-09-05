@@ -14,6 +14,6 @@ public class RaceFactoryTest {
         Race race = RaceFactory.buildRace("Black-man");
         Assert.assertNotNull(race.getRaceId());
         Assert.assertEquals("Black-man", race.getRaceDescription());
-        System.out.println(race.toString());
+
     }
 }

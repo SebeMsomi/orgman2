@@ -14,6 +14,6 @@ public class OrganisationFactoryTest {
         Organisation org = OrganisationFactory.buildOrganisation("Facebook");
         Assert.assertNotNull(org.getOrgCode());
         Assert.assertEquals("Facebook", org.getOrgName());
-        System.out.println(org.toString());
+
     }
 }

@@ -25,6 +25,6 @@ public class UserDemographyFactoryTest {
                 "Tile",gender.getGenderId(),race.getRaceId(),date);
         assertNotNull(userDemography);
         assertNotNull(userDemography.getUserEmail());
-        System.out.println(userDemography.toString());
+
     }
 }

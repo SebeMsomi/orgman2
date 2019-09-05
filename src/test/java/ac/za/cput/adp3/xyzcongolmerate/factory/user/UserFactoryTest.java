@@ -14,6 +14,6 @@ public class UserFactoryTest {
         User userTest = UserFactory.buildUser("sebe@gmail.com","Sebe","Msomi");
         Assert.assertNotNull(userTest.toString());
         assertEquals("sebe@gmail.com", userTest.getUserEmail());
-        System.out.println(userTest.toString());
+
     }
 }

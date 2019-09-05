@@ -19,6 +19,6 @@ public class OrganisationUserFactoryTest {
         OrganisationUser orgUser = new OrganisationUser( UUID.randomUUID().toString(), user.getUserEmail());
         Assert.assertNotNull(orgUser);
         Assert.assertNotNull(orgUser.getOrgCode());
-        System.out.println(orgUser.toString());
+
     }
 }

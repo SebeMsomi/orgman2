@@ -12,6 +12,6 @@ public class GenderFactoryTest {
         Gender gender = GenderFactory.buildGender("Male");
         Assert.assertNotNull(gender.getGenderId());
         Assert.assertEquals("Male", gender.getGenderDescription());
-        System.out.println(gender.toString());
+        
     }
 }

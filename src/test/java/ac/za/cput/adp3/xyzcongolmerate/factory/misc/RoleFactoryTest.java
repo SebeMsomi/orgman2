@@ -14,6 +14,6 @@ public class RoleFactoryTest {
         Role role = RoleFactory.buildRole("CEO");
         Assert.assertNotNull(role.getRoleId());
         Assert.assertEquals("CEO", role.getRoleName());
-        System.out.println(role.toString());
+
     }
 }

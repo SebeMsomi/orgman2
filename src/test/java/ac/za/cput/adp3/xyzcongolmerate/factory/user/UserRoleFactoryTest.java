@@ -16,6 +16,6 @@ public class UserRoleFactoryTest {
                 "sebe@gmail.com", "1");
         assertNotNull(ur);
         assertEquals("sebe@gmail.com", ur.getUserEmail());
-        System.out.println(ur.toString());
+
     }
 }
