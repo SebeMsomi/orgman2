@@ -23,30 +23,46 @@ public class OrganisationRepositoryImpl implements OrganisationRepository {
     //TODO: Implement body
     @Override
     public Organisation create(Organisation organisation) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        // throw new UnsupportedOperationException("Not supported yet.");
+        organisationDB.add(organisation);
+        return organisation;
     }
 
     //TODO: Implement body
     @Override
     public Organisation read(String orgCode) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return organisationDB.stream().filter(organisation -> orgCode.equalsIgnoreCase(orgCode)).findAny().orElse(null);
+        // throw new UnsupportedOperationException("Not supported yet.");
     }
 
     //TODO: Implement body
     @Override
     public Organisation update(Organisation organisation) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        //throw new UnsupportedOperationException("Not supported yet.");
+        Organisation organisation1 = read(organisation.getOrgCode());
+        if(organisation1 != null)
+        {
+            organisationDB.remove(organisation1);
+            return create(organisation);
+        }
+        return null;
     }
 
     //TODO: Implement body
     @Override
     public void delete(String orgCode) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        // throw new UnsupportedOperationException("Not supported yet.");
+        Organisation organisation = read(orgCode);
+        if(organisation != null)
+        {
+            organisationDB.remove(organisation);
+        }
     }
 
     //TODO: Implement body
     @Override
     public Set<Organisation> getAll() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return this.organisationDB;
+        //throw new UnsupportedOperationException("Not supported yet.");
     }
 }
