@@ -11,9 +11,9 @@ public class RaceFactoryTest {
     //TODO: implement method body ONLY!
     @Test
     public void buildRace() {
-        Race race = RaceFactory.buildRace("Black-man");
+        Race race = RaceFactory.buildRace("Black");
         Assert.assertNotNull(race.getRaceId());
-        Assert.assertEquals("Black-man", race.getRaceDescription());
+        Assert.assertSame("Black", race.getRaceDescription());
 
     }
 }

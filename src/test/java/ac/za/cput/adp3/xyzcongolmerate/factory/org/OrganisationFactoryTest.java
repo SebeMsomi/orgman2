@@ -13,7 +13,7 @@ public class OrganisationFactoryTest {
     public void buildOrganisation() {
         Organisation org = OrganisationFactory.buildOrganisation("Facebook");
         Assert.assertNotNull(org.getOrgCode());
-        Assert.assertEquals("Facebook", org.getOrgName());
+        Assert.assertSame("Facebook", org.getOrgName());
 
     }
 }
